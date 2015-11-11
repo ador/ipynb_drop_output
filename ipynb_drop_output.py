@@ -59,7 +59,7 @@ if "git" in nb_metadata:
         suppress_output = True
 if not suppress_output:
     sys.stdout.write(nb)
-    exit() 
+    exit()
 
 
 ipy_version = int(json_in["nbformat"])-1 # nbformat is 1 more than actual version.
@@ -68,7 +68,7 @@ def strip_output_from_cell(cell):
     if "outputs" in cell:
         cell["outputs"] = []
     if "execution_count" in cell:
-        cell["execution_count"] = null
+        cell["execution_count"] = None
 
 
 if ipy_version == 2:
