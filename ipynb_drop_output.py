@@ -68,7 +68,7 @@ def strip_output_from_cell(cell):
     if "outputs" in cell:
         cell["outputs"] = []
     if "execution_count" in cell:
-        del cell["execution_count"]
+        cell["execution_count"] = null
 
 
 if ipy_version == 2:
